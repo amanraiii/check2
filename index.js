@@ -2,7 +2,7 @@ import { startServer } from './app/index.js';
 
 const app = await startServer();
 
-const server = app.listen(8000, () => {
+const server = app.listen(8001, () => {
   console.log(`Server is running on port ${server.address().port}`);
 });
 
