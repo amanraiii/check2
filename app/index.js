@@ -9,16 +9,11 @@ export async function startServer() {
   let interval;
   try {
     interval = setInterval(async () => {
-      const hashtag = await fetch('https://hashtag-pklr.onrender.com/health');
+      const check1 = await fetch('https://check1-hm4v.onrender.com/health');
       // const hashtagRes = await hashtag.json();
 
-      const devlinks = await fetch(
-        'https://devlinks-server-psi.vercel.app/health'
-      );
-      const devlinksRes = await devlinks.json();
-
-      console.log('hashtag', hashtag.statusText);
-      console.log('devlink', devlinksRes);
+      console.log('check1', check1.statusText);
+   
     }, 1000 * 60 * 5);
   } catch (error) {
     console.log(error);
